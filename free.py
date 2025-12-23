@@ -2,6 +2,7 @@ import os
 import pygame as pg
 import sys
 import random
+import math
 
 # 画像などを読み込みやすくするため、実行ファイルのディレクトリを作業場所に設定
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -33,7 +34,7 @@ class Koukaton(pg.sprite.Sprite):
         # 基本画像の読み込み（失敗したら赤色の四角にする）
         self.image = pg.Surface((50, 50))
         self.image.fill(RED)
-        self.load_image("fig/3.png") # 初期画像
+        self.load_image("3.png") # 初期画像
 
         self.rect = self.image.get_rect()
         self.reset_position() # 初期位置へ
@@ -415,7 +416,7 @@ def main():
                     
                     player.reset_position() 
                     # 新しいラウンドでは初期画像に戻す
-                    player.load_image("fig/3.png")
+                    player.load_image("3.png")
 
                     enemy.kill()            # 今のボスを消す
                     gates.empty()           # ゲートを全部消す
