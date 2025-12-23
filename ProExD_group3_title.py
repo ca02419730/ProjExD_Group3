@@ -44,10 +44,10 @@ def main():
             if event.type == pg.QUIT:
                 running = False
 
-            # クリック処理（中身は後で追加）
+            # クリック処理
             if event.type == pg.MOUSEBUTTONDOWN:
                 if stage1_rect.collidepoint(event.pos):
-                    return 0  # STAGE 1 をクリックした時の処理を書く
+                    return 0  
                 if stage2_rect.collidepoint(event.pos):
                     pg.quit()
                     subprocess.run([sys.executable, "stage2.py"])
