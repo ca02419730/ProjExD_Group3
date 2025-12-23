@@ -6,8 +6,6 @@ import sys
 import time
 import pygame as pg
 
-import militaly_mode 
-import arrow_mode
 
 WIDTH = 1100
 HEIGHT = 650
