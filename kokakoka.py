@@ -325,7 +325,7 @@ def stage2(screen):
     font = pg.font.SysFont("meiryo", 26)
     start_se.play()
 
-    pg.mixer.music.load("fig/joi.mp3")
+    pg.mixer.music.load("joi_sound/famipop3.mp3")
     pg.mixer.music.set_volume(0.4)
     pg.mixer.music.play(-1)
 
