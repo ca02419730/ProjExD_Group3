@@ -81,7 +81,7 @@ class Enemy:
             )
 
         self.image = pg.transform.rotozoom(img, 0, scale)
-        self.max_hp = (100 if self.is_boss else 10) + level
+        self.max_hp = (40 if self.is_boss else 10) + level * 2
         self.hp = self.max_hp
         self.speed = random.randint(1, 2) + level // 3
 
@@ -311,7 +311,7 @@ def stage2(screen):
                 enemies.append(Enemy(enemy_count))
                 enemy_count += 1
 
-            if gate_timer >= 5000:
+            if gate_timer >= 4000:
                 gate_timer = 0
                 gates.clear()
                 e1, e2 = random.sample(GATE_EFFECTS, 2)
@@ -323,7 +323,7 @@ def stage2(screen):
                 for i in range(player.arrow_num):
                     attacks.append(Arrow(player, i, player.arrow_num))
 
-            if sword_timer >= 6000:
+            if sword_timer >= 3000:
                 sword_timer = 0
                 for i in range(player.sword_num):
                     attacks.append(Sword(player, i, player.sword_num))
