@@ -9,7 +9,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # --- 設定（数字を変えるとゲームバランスが変わります） ---
 WIDTH = 600             # 画面の幅
-HEIGHT = 800            # 画面の高さ
+HEIGHT = 700            # 画面の高さ
 FPS = 60                # 1秒間のコマ数
 GATES_PER_ROUND = 7     # 1周で出るゲートの数
 GATE_SPAWN_TIME = 90    # ゲートが出る間隔（フレーム数。60で約1秒）
